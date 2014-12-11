@@ -127,7 +127,7 @@ static struct backlight_ops htcleo_backlight_ops =
 static int htcleo_backlight_probe(struct platform_device *pdev)
 {
     struct backlight_device *bd;
-    bd = backlight_device_register("htcleo-backlight", &pdev->dev, NULL, &htcleo_backlight_ops);
+    bd = backlight_device_register("htcleo-backlight", &pdev->dev, NULL, &htcleo_backlight_ops, NULL);
     bd->props.max_brightness = HTCLEO_MAX_BRIGHTNESS;
     bd->props.brightness = HTCLEO_MAX_BRIGHTNESS;
     htcleo_brightness_set(bd);

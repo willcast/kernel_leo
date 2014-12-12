@@ -589,7 +589,7 @@ int mdp_set_output_format(struct mdp_device *mdp_dev, int bpp)
 		break;
 	case 32:
 		format = DMA_IBUF_FORMAT_XRGB8888;
-		pack_pattern = DMA_PACK_PATTERN_BGR;
+		pack_pattern = DMA_PACK_PATTERN_RGB;
 		break;
 #endif
 	default:

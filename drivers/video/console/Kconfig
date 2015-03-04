@@ -133,7 +133,7 @@ config STI_CONSOLE
 
 config FONTS
 	bool "Select compiled-in fonts"
-	depends on FRAMEBUFFER_CONSOLE || STI_CONSOLE
+	depends on FRAMEBUFFER_CONSOLE || STI_CONSOLE || HTC_FB_CONSOLE
 	help
 	  Say Y here if you would like to use fonts other than the default
 	  your frame buffer console usually use.
@@ -228,7 +228,7 @@ config FONT_10x18
 
 config FONT_SCRIPT_8x16
 	bool "awesome looking 8x16 script font" if FONTS
-	depends on FRAMEBUFFER_CONSOLE
+	depends on FRAMEBUFFER_CONSOLE || HTC_FB_CONSOLE
 	help
 	  This is the font used by nsboot. It is 8 pixels wide by 16 pixels
 	  high. Say Y for ninja swag. Say N if you are a square.

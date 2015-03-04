@@ -2436,3 +2436,13 @@ config HTC_ACCESSORY_ONEWIRE
         help
           Provides support of HTC one wire protocol driver.
 endif
+
+config HTC_FB_CONSOLE
+        bool "Boot console for HTC phones (needs a font which has width <= 8)"
+        default n
+
+config HTC_FB_CONSOLE_BOOT
+        depends on HTC_FB_CONSOLE
+        bool "Continue to use HTC FB console after msm_fb is probed"
+        default n
+
